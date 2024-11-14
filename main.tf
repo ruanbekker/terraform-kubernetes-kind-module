@@ -16,8 +16,11 @@ resource "kind_cluster" "this" {
           }
       }
 
-      node {
+      dynamic "node" {
+        for_each = range(var.workers)
+        content {
           role = "worker"
+        }
       }
   }
 }

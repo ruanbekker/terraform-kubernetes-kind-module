@@ -52,6 +52,7 @@ module "kubernetes" {
   source  = "git::https://github.com/ruanbekker/terraform-kubernetes-kind-module.git?ref=main"
 
   cluster_name    = "test-cluster"
+  workers         = 1
   cluster_version = "v1.27.1"
   kubeconfig_file = "/tmp/kube.config"
 }
