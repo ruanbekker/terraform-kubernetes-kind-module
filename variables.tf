@@ -10,6 +10,12 @@ variable "cluster_version" {
   description = "The kubernetes version." 
 }
 
+variable "workers" {
+  type    = number
+  default = 1
+  description = "The number of worker nodes to add."
+}
+
 variable "host_port" {
   type        = number
   default     = 18080
